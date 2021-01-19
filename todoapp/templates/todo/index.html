@@ -1,0 +1,13 @@
+<h3>To do</h3>
+<form method="POST" action="/">
+    {% csrf_token %} {{ form }}
+    <input type="submit" name="creat task" />
+</form>
+
+{% for task in something %}
+<div>
+    <li>{{ task }}</li>
+    <a href="{% url 'update_task' task.id %}">Update</a><br>
+    <a href="{% url 'delete' task.id %}">Delete</a>
+</div>
+{% endfor %}
