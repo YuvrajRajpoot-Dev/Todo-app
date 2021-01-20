@@ -13,38 +13,48 @@
     <title>Todo app</title>
 </head>
 
-<body>
+<body style="background-color:SlateBlue;">
     <div style="text-align: center;">
-        <h1>Welcome to Todo app </h1>
+        <h1 style="color: ghostwhite;">Welcome to Todo app </h1>
     </div>
-    <div class="container">
+    <div class="container" style="background-color: rgb(245, 249, 252); width: 50%;">
         <form method="POST" action="/">
 
             {% csrf_token %}
-            <div class="mb-3 col-6 ">
+            <div class="container" style="margin-left: 34%;     padding-top: 20px;">
                 <label for="exampleFormControlInput1" class="form-label">Title</label>
                 {{ form.title }}
             </div>
 
-            <div class="mb-3 col-6">
+            <div class="container" style="margin-left: 32%;     padding-top: 20px;">
                 <label for="exampleFormControlInput1" class="form-label">Details</label>
                 {{ form.details }}
             </div>
 
-            <div class="mb-3 col-6">
+            <div class=container" style="margin-left: 35%;     padding-top: 20px;">
                 <label for="exampleFormControlInput1" class="form-label">Date</label>
                 {{form.date}}
-                <input class="btn btn-primary" type="submit" name="creat task" />
+                <input class="btn btn-primary" style="margin-left: 5%;" type="submit" name="creat task" />
             </div>
         </form>
     </div>
 
+    <div style="text-align: center;">
+        <h3 style="color: ghostwhite;">List of task</h3>
+    </div>
+
     {% for task in something %}
-    <div class="container">
-        <li>{{ task }}
-            <a class=" btn btn-warning " href="{% url 'update_task' task.id %}">Update</a>
+    <div class="container" style="background-color: rgb(245, 248, 250); width: 50%;"  >
+        <ol>
+            <label style="font-size: 160%; color: rgb(95, 95, 253);" for="exampleFormControlInput1" class="form-label">Task :</label>
+            {{ task.title }}
+           <div style="font-size: 150%;">
+            <label style="color: orange;"  for="exampleFormControlInput1" class="form-label">Details :</label>
+            {{ task.details }}
+        </div> 
+            <a class=" btn btn-warning " href="{% url 'update_task' task.id %}" style="margin-left: 75%;">Update</a>
             <a class="btn btn-danger" href="{% url 'delete' task.id %}">Delete</a><br>
-        </li>
+        </ol>
     </div>
     {% endfor %}
 
