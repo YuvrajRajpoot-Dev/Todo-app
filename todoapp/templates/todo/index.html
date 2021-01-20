@@ -53,8 +53,8 @@
                 <label style="color: orange;" for="exampleFormControlInput1" class="form-label">Details :</label>
                 {{ task.details }}
             </div>
-            <a class=" btn btn-warning " href="{% url 'update_task' task.id %}" style="margin-left: 75%;">Update</a>
-            <a class="btn btn-danger" href="{% url 'delete' task.id %}">Delete</a><br>
+            <a class=" btn btn-warning " href="{% url 'update_task' task.id %}" style="margin-left: 75%; margin-top: -12%;">Update</a>
+            <a class="btn btn-danger" href="{% url 'delete' task.id %}" style="margin-top: -12%;">Delete</a><br>
         </ol>
     </div>
     {% endfor %}
