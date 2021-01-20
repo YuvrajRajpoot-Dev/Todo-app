@@ -44,14 +44,15 @@
     </div>
 
     {% for task in something %}
-    <div class="container" style="background-color: rgb(245, 248, 250); width: 50%;"  >
+    <div class="container" style="background-color: rgb(245, 248, 250); width: 50%;">
         <ol>
-            <label style="font-size: 160%; color: rgb(95, 95, 253);" for="exampleFormControlInput1" class="form-label">Task :</label>
+            <label style="font-size: 160%; color: rgb(95, 95, 253);" for="exampleFormControlInput1"
+                class="form-label">Task :</label>
             {{ task.title }}
-           <div style="font-size: 150%;">
-            <label style="color: orange;"  for="exampleFormControlInput1" class="form-label">Details :</label>
-            {{ task.details }}
-        </div> 
+            <div style="font-size: 150%;">
+                <label style="color: orange;" for="exampleFormControlInput1" class="form-label">Details :</label>
+                {{ task.details }}
+            </div>
             <a class=" btn btn-warning " href="{% url 'update_task' task.id %}" style="margin-left: 75%;">Update</a>
             <a class="btn btn-danger" href="{% url 'delete' task.id %}">Delete</a><br>
         </ol>
