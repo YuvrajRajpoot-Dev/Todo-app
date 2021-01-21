@@ -16,17 +16,17 @@
         <form method="POST" action="">
             {% csrf_token %}
             <div class="container" style="margin-left: 10%; padding-top: 20px;"">
-                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <label for=" exampleFormControlInput1" class="form-label">Title</label>
                 {{ form.title }}
             </div>
             <div class="container" style="margin-left: 8%; padding-top: 20px;"">
-                <label for="exampleFormControlInput1" class="form-label">Details</label>
+                <label for=" exampleFormControlInput1" class="form-label">Details</label>
                 {{ form.details}}</div>
             <div class="container" style="margin-left: 10%; padding-top: 20px;""> 
-                <label for="exampleFormControlInput1" class="form-label">Date</label>
+                <label for=" exampleFormControlInput1" class="form-label">Date</label>
                 {{ form.date }}
-            <input class="btn btn-primary" style="margin-left: 5%;" type=submit name="Update task"/>
-        </div>
+                <input class="btn btn-primary" style="margin-left: 5%;" type=submit name="Update task" />
+            </div>
 
         </form>
     </div>
